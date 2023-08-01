@@ -1,17 +1,5 @@
-# BinMoCo: Improving Binary Code Similarity Detection with Hard Sample-Aware Momentum Contrastive Learning
-Binary code similarity detection (BCSD) based on hard sample-aware momentum contrastive learning. We introduce Momentum Contrast and Multi-Similarity Loss into BCSD.
-
-## BinMoCo Overview
-![](images/BinMoCo.png)
-## Part of Results Visualization
-MRR ~ Poolsize on BINKIT dataset (binary function search)
-![](images/poolsize_comparison_on_binkit_2.0_on_mrr.png)
-
-MRR ~ Poolsize on BFS dataset (binary function search)
-![](images/poolsize_comparison_on_sec22_on_mrr.png)
-
-Recall@5 ~ CVEs (Known Vulnerability Detection)
-![](images/1-day_vul_detect_recallat5_on_different_cves.png)
+# BinMoCo
+Source code of BinMoCo.
 
 ## Environment
 ```

@@ -40,6 +40,40 @@ class GatedGCNKernel(MessagePassing):
         return gate * B_j
 
 
+class GatedGCN_EKernel(MessagePassing):
+    def __init__(self, in_channels, out_channels, edge_dims):
+        super().__init__(aggr='add')
+        self.A = nn.Linear(in_channels, out_channels)
+        self.B = nn.Linear(in_channels, out_channels)
+        self.C = nn.Linear(edge_dims, out_channels)
+        self.D = nn.Linear(in_channels, out_channels)
+        self.E = nn.Linear(in_channels, out_channels)
+    
+    def forward(self, x, edge_index, edge_attr):
+        if isinstance(x, torch.Tensor):
+            x = (x, x) # j -> i
+        Ax = self.A(x[1])
+        Dx = self.D(x[1])
+        
+        Bx = self.B(x[0])
+        Ex = self.E(x[0])
+        
+        Ce = self.C(edge_attr)
+        
+        edge_attr = self.edge_updater(edge_index=edge_index, D=Dx, E=Ex, edge_attr=Ce)
+        out = self.propagate(edge_index, B=Bx, edge_attr=edge_attr)
+        out = out + Ax
+        
+        return out, edge_attr
+
+    def message(self, B_j, edge_attr):
+        gate = torch.sigmoid(edge_attr)
+        return gate * B_j
+        
+    def edge_update(self, D_i, E_j, edge_attr):
+        return D_i + E_j + edge_attr
+    
+
 class GatedGCN(BasicGNN):
     supports_edge_weight = False
     supports_edge_attr = True
