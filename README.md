@@ -1,5 +1,7 @@
 # BinMoCo
-Source code of BinMoCo.
+Source code of BinMoCo: Improving Binary Code Similarity Detection with Hard Sample-Aware Momentum Contrastive Learning.
+
+![](assets/BinMoCo.png)
 
 ## Environment
 ```
@@ -14,9 +16,9 @@ faiss-gpu 1.7.2
 ```
 
 ## Train and Evaluate on BFS dataset
+The same procedure can be applied to BINKIT dataset which can be downloaded [here](https://github.com/SoftSec-KAIST/BinKit).
 
 0. Download the BFS dataset [here]((https://drive.google.com/drive/folders/1uqZb0geb4CgDe9XEczZhNcyfBQM1TusG)), which is proposed in paper *How Machine Learning Is Solving the Binary Function Similarity Problem*
-
 
 1. Build BFS Database
 
@@ -81,12 +83,4 @@ python code/build_testdata.py database/sec22
 ```
 python code/test.py results/dml/sec22_cfg_cg_trans_gatedgcn_gin_ms_ms_moco/version_0
 ```
-
-
-## Reference
-We refer to the following repositories during implementation:
-
-- SAFE: [source code](https://github.com/gadiluna/SAFE)
-- jTrans: [source code](https://github.com/vul337/jTrans)
-- my solution for [CCF BDCI 2022 - Linux跨平台二进制函数识别](https://datafountain.cn/competitions/593): [source code](https://github.com/Bowen-n/bcsd_ms)
 

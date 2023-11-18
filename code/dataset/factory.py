@@ -1,6 +1,3 @@
-# @Time: 2022.12.8 17:32
-# @Author: Bolun Wu
-
 import os
 import sys
 
@@ -473,18 +470,18 @@ class BinKit_v2Factory(DataFactory):
     
 def test_build_db_binkit():
     factory = BinKitFactory(db_path='demo.sqlite')
-    factory.build_cg_db(['/home/wubolun/data/bcsd/binkit/normal_dataset/',
-                      '/home/wubolun/data/bcsd/binkit/gnu_debug_sizeopt'], num_proc=1)
+    factory.build_cg_db(['/home/user/data/bcsd/binkit/normal_dataset/',
+                      '/home/user/data/bcsd/binkit/gnu_debug_sizeopt'], num_proc=1)
 
 
 def test_build_db_sec22():
     factory = Sec22Factory(db_path='demo.sqlite')
-    factory.build_db(['/home/wubolun/data/bcsd/security22_review/Dataset-1'], num_proc=8)
+    factory.build_db(['/home/user/data/bcsd/security22_review/Dataset-1'], num_proc=8)
 
 
 def test_build_db_binkit_v2():
     factory = BinKit_v2Factory(db_path='demo.sqlite')
-    factory.build_db(['/home/wubolun/data/bcsd/binkit_2.0/BinKit_normal'], 
+    factory.build_db(['/home/user/data/bcsd/binkit_2.0/BinKit_normal'], 
                      num_proc=4)
 
 

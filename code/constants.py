@@ -1,6 +1,3 @@
-# @Time: 2022.12.11 15:25
-# @Author: Bolun Wu
-
 import os
 
 root_dir = os.path.realpath(os.path.join(__file__, '..', '..'))

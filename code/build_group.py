@@ -1,6 +1,3 @@
-# @Time: 2023.5.4 16:17
-# @Author: Bolun Wu
-
 import argparse
 import os
 import time

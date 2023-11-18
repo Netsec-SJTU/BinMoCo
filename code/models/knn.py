@@ -1,6 +1,3 @@
-# @Time: 2022.12.29 23:44
-# @Author: Bolun Wu (e-mail: bowenwu@sjtu.edu.cn)
-
 import faiss
 import torch
 

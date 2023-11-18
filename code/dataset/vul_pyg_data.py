@@ -1,6 +1,3 @@
-# @Time: 2023.5.25 15:28
-# @Author: Bolun Wu
-
 import json
 import os
 

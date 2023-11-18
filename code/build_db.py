@@ -1,6 +1,3 @@
-# @Time: 2023.5.4 18:55
-# @Author: Bolun Wu
-
 import argparse
 import os
 
@@ -16,14 +13,14 @@ def main():
     if args.db_name == 'sec22':
         factory = Sec22Factory(os.path.join(db_dir, 'sec22', 'db.sqlite'))
         factory.build_db(
-            ['/home/wubolun/data/bcsd/security22_review/Dataset-1'], 
+            ['/home/user/data/bcsd/security22_review/Dataset-1'], 
             num_proc=6
         )
 
     elif args.db_name == 'binkit_2.0':
         factory = BinKit_v2Factory(os.path.join(db_dir, 'binkit_2.0', 'db.sqlite'))
         factory.build_db(
-            ['/home/wubolun/data/bcsd/binkit_2.0/BinKit_normal'],
+            ['/home/user/data/bcsd/binkit_2.0/BinKit_normal'],
             num_proc=12
         )
 

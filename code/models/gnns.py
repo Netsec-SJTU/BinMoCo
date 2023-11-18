@@ -1,6 +1,3 @@
-# @Time: 2022.12.28 15:31
-# @Author: Bolun Wu (e-mail: bowenwu@sjtu.edu.cn)
-
 import torch
 import torch.nn.functional as F
 from torch import nn

@@ -1,6 +1,3 @@
-# @Time: 2022.12.26 20:39
-# @Author: Bolun Wu
-
 import argparse
 import json
 import os

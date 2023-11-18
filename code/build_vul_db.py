@@ -1,6 +1,3 @@
-# @Time: 2023.5.24 19:47
-# @Author: Bolun Wu
-
 import os
 import sys
 
@@ -37,7 +34,7 @@ def extract_all_functions(binary_path, save_dir):
         
 
 def main():
-    tar_dir = '/home/wubolun/data/bcsd/security22_review/Dataset-Vulnerability'
+    tar_dir = '/home/user/data/bcsd/security22_review/Dataset-Vulnerability'
     save_dir = 'database/vul_libcrypto.so.1.0.0'
     for filename in os.listdir(tar_dir):
         _save_dir = os.path.join(save_dir, filename)

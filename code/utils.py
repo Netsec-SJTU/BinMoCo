@@ -1,6 +1,3 @@
-# @Time: 2022.12.2 18:29
-# @Author: Bolun Wu
-
 import json
 import os
 import re

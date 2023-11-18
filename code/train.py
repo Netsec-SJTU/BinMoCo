@@ -1,6 +1,3 @@
-# @Time: 2022.12.28 14:20
-# @Author: Bolun Wu (e-mail: bowenwu@sjtu.edu.cn)
-
 import argparse
 import copy
 import json

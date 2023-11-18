@@ -1,6 +1,3 @@
-# @Time: 2022.12.30 2:16
-# @Author: Bolun Wu (e-mail: bowenwu@sjtu.edu.cn)
-
 import torch
 
 

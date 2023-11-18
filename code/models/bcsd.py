@@ -1,6 +1,3 @@
-# @Time: 2022.12.28 15:32
-# @Author: Bolun Wu (e-mail: bowenwu@sjtu.edu.cn)
-
 import os
 import sys
 
